@@ -1,0 +1,27 @@
+{
+  "name": "boiler-23",
+  "version": "1.0.0",
+  "description": "AH Website / App Boilerplate 2023",
+  "main": "index.js",
+  "author": "Adam Haley",
+  "scripts": {
+    "test": "NODE_ENV=test karma start",
+    "start": "node node_modules/.bin/webpack-dev-server --watch-files src",
+    "build": "NODE_ENV=production node node_modules/.bin/webpack"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.0",
+    "jsx-loader": "^0.13.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "stylus-loader": "^7.1.0",
+    "ts-loader": "^9.4.2",
+    "webpack": "^5.75.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.0.1"
+  }
+}
