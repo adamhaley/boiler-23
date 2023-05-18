@@ -1,5 +1,6 @@
 var React = require('react');
 var ReactDOMClient = require('react-dom/client');
+require('../styl/main.styl');
 
 function Main(props){
 		return (
