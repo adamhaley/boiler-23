@@ -5,7 +5,7 @@ const path = require('path');
 
 module.exports = {
 	context: __dirname + '/src',
-	entry: './components/Main.jsx',
+	entry: './components/Main.tsx',
 	mode: 'development',
 	devtool: 'source-map',
 	output: {
@@ -13,6 +13,7 @@ module.exports = {
 		filename: 'bundle.js'
 	},
 	resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
 		// All aliases are used for Stylus @import and @require path resolution
 		// See `alias` loader option below for adding Stylus-specific aliases
 		alias: {
@@ -29,7 +30,7 @@ module.exports = {
 	},
 	module: {
 		rules: [
-			{
+            			{
 				test: /\.styl$/,
 				use: [
 					{
@@ -60,6 +61,7 @@ module.exports = {
 					},
 				]
 			},
+            {test: /\.tsx?$/, use: 'ts-loader', exclude: /node_modules/},
 			{test: /\.jsx?$/, use: 'jsx-loader', exclude: /node_modules/},
 			{test: /\.css$/i, use: [MiniCssExtractPlugin.loader, "css-loader"]},
 			{test: /\.ts$/, use: 'ts-loader'}

@@ -1,8 +1,12 @@
-var React = require('react');
+import * as React from 'react';
 var ReactDOMClient = require('react-dom/client');
 require('../styl/main.styl');
 
-function Main(props){
+interface props {
+    children: React.ReactNode;
+}
+
+const Main: React.FC = ( { children }: props) => {
 		return (
 			<div>
 				Hello World
