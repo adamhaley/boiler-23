@@ -9,7 +9,7 @@ interface props {
 const Main: React.FC = ( { children }: props) => {
 		return (
 			<div>
-				Hello World
+				Hello World from Typescript and React
 			</div>
 		)
 };
